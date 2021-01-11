@@ -1,0 +1,10 @@
+GET https://jsonplaceholder.typicode.com/users/1
+
+Accept: application/json
+
+###
+
+GET https://jsonplaceholder.typicode.com/users
+Accept: application/json
+
+###

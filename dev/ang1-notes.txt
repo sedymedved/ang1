@@ -1,0 +1,130 @@
+
+##### Install
+npm install -g @angular/cli
+
+
+##### Next tasks:
+* Create github repo (Done)
+* Generate skeleton of Angular app (Done)
+* Deploy (Done)
+* Routing (Done)
+* Bootstrap (Done)
+
+-------------------------------------------------------------------------------
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+
+-------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------
+Database:
+
+
+CREATE TABLE `sedymedvedwz0031`.`users` (
+`id`          INT          NOT NULL AUTO_INCREMENT,
+`username`    VARCHAR(200) NOT NULL ,
+`email`       VARCHAR(200) NOT NULL ,
+`password`    VARCHAR(200) NOT NULL ,
+`preferences` JSON         NOT NULL,
+ PRIMARY KEY (`id`)
+ ) ENGINE = InnoDB;
+
+ALTER TABLE `sedymedvedwz0031`.`users` ADD UNIQUE `UQ_username` (`username`);
+
+INSERT INTO `users`
+(`username`, `email`, `password`, `preferences`) VALUES
+('admin', 'admin@sedymedved.wz.cz', 'heslo', '{}'),
+('jan',   'jan@seznam.cz', 'heslo', '{}'),
+('lukas', 'lukas@gmail.com', 'heslo', '{}');
+
+
+-------------------------------------------------------------------------------
+Martin S. rx
+
+https://bitbucket.org/suky/inactive-server/src/master/
+
+https://bitbucket.org/suky/inactive-client/src/master/
+
+https://lumen.laravel.com/docs/8.x
+
+https://rxjs-dev.firebaseapp.com/api/index/function/throwError
+https://rxjs-dev.firebaseapp.com/api/index/function/of
+https://rxjs-dev.firebaseapp.com/api/operators/delay
+
+
+-------------------------------------------------------------------------------
+
+https://www.api.store/czso.cz/dokumentace/#tag/Obyvatelstvo-v-zakladnich-sidelnich-jednotkach
+
+cvrRhgiyHb8P4KkcqWoY3aY5oueG81Ae5Li1xu15.
+
+Klíč můžete použít pro všechna API na webu https://www.api.store.
+
+
+-------------------------------------------------------------------------------
+
+https://jsonplaceholder.typicode.com
+
+
+-------------------------------------------------------------------------------
+
+PHP
+<?php
+header('Content-Type: text/plain');
+
+define('METHOD', 'aes-256-cbc');
+define('KEY',    'llavscQ0C5o+VSB92YUg1FjXMEca3EcZpHDLKhVg8PcC5NZUkWc5huiBg+uh5kL2KNfx/GwiWqpLBvYWX12CFQ==');
+define('IV',     'XMAPuUph2466KjHbQ+SLEQ==');
+define('DB_PASSWORD_ENCRYPTED', 'lwUTigE2v8L6HKAu4twRFHj5WAZWrJzgqNdI3W8gGys=');
+
+function my_secured_encrypt($data)
+{
+  $method = METHOD;
+  $key = base64_decode(KEY);
+  $iv = base64_decode(IV);
+
+  $encrypted = openssl_encrypt($data, $method, $key, OPENSSL_RAW_DATA, $iv);
+  $output = base64_encode($encrypted);
+  return $output;
+}
+
+function my_secured_decrypt($input)
+{
+  $method = METHOD;
+  $key = base64_decode(KEY);
+  $iv = base64_decode(IV);
+  $encrypted = base64_decode($input);
+
+  $data = openssl_decrypt($encrypted, $method, $key, OPENSSL_RAW_DATA, $iv);
+  return $data;
+}
+
+$dec = my_secured_decrypt(DB_PASSWORD_ENCRYPTED);
+echo "decoded=" . $dec;
+?>
+
+-------------------------------------------------------------------------------
+crypto-js": "^4.0.0",
+
+Encrypt/decrypt https://stackblitz.com/edit/encrypt-decrypt-app?file=app%2Fapp.component.ts
+if (this.encryptMode) {
+        this.conversionOutput = CryptoJS.AES.encrypt(this.textToConvert.trim(), this.password.trim()).toString();
+      }
+      else {
+        this.conversionOutput = CryptoJS.AES.decrypt(this.textToConvert.trim(), this.password.trim()).toString(CryptoJS.enc.Utf8);
+      }
+
+-------------------------------------------------------------------------------
+Icons:
+
+https://freeicons.io/icon-list/food-icon-set?page=1
+
+https://freeicons.io/filter/popular/all/essential
+
+https://icoconvert.com/
+-------------------------------------------------------------------------------

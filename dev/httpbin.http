@@ -1,0 +1,124 @@
+GET http://httpbin.org/ip
+Accept: application/json
+###
+# "origin": "185.112.167.59"
+
+
+GET http://httpbin.org/user-agent
+Accept: application/json
+###
+# "user-agent": "Apache-HttpClient/4.5.6 (Java/1.8.0_202-release)"
+
+
+GET http://httpbin.org/headers
+Accept: application/json
+###
+#"headers": {
+#    "Accept": "application/json",
+#    "Accept-Encoding": "gzip,deflate",
+#    "Host": "httpbin.org",
+#    "User-Agent": "Apache-HttpClient/4.5.6 (Java/1.8.0_202-release)",
+#    "X-Amzn-Trace-Id": "Root=1-5feafbfc-1bb921cd148cc1eb546da0f5"
+#  }
+
+
+GET http://httpbin.org/status/404
+Accept: application/json
+###
+#HTTP/1.1 404 NOT FOUND
+#Date: Tue, 29 Dec 2020 09:51:43 GMT
+#Content-Type: text/html; charset=utf-8
+#Content-Length: 0
+#Connection: keep-alive
+#Server: gunicorn/19.9.0
+#Access-Control-Allow-Origin: *
+#Access-Control-Allow-Credentials: true
+#
+#<Response body is empty>
+#
+#Response code: 404 (NOT FOUND)
+
+
+GET http://httpbin.org/get?a=10&b=maruska&a=20
+Accept: application/json
+###
+#  "args": {
+#    "a": [
+#      "10",
+#      "20"
+#    ],
+#    "b": "maruska"
+#  }
+
+
+POST http://httpbin.org/post?c=30&d=true
+Accept: application/json
+
+{
+  "id": 999,
+  "value": "content"
+}
+###
+# "args": {
+#    "c": "30",
+#    "d": "true"
+#  },
+#  "data": "{\n  \"id\": 999,\n  \"value\": \"content\"\n}",
+
+
+POST https://httpbin.org/post
+Content-Type: application/x-www-form-urlencoded
+
+id=999&value=content
+###
+#"form": {
+#    "id": "999",
+#    "value": "content"
+#  },
+
+
+POST https://httpbin.org/post
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="element-name"
+Content-Type: text/plain
+
+Name123
+
+--WebAppBoundary
+Content-Disposition: form-data; name="data"; filename="data.json"
+Content-Type: application/json
+
+< ./httpbin_request_form_data.json
+--WebAppBoundary--
+
+###
+
+
+GET https://httpbin.org/anything?a=120&b=Lukas
+###
+# "args": {
+#    "a": "120",
+#    "b": "Lukas"
+#  },
+
+
+POST http://httpbin.org/anything?c=40&d=false
+Accept: application/json
+
+{
+  "id": 800,
+  "value": "content8"
+}
+###
+# "args": {
+#    "c": "40",
+#    "d": "false"
+#  },
+#  "data": "{\n  \"id\": 800,\n  \"value\": \"content8\"\n}",
+
+#  "json": {
+#    "id": 800,
+#    "value": "content8"
+#  },

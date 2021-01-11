@@ -1,0 +1,20 @@
+<h4>Login:</h4>
+<form *ngIf="!authService.getUser()">
+
+  <label for="username">User:</label>
+  <input name="username" #username
+    (keydown.enter)="login(username.value, password.value)">
+
+  <label for="password">Password:</label>
+  <input name="password" type="password" #password
+    (keydown.enter)="login(username.value, password.value)">
+
+  <div *ngIf="message">{{ message }}</div>
+
+  <a href (click)="login(username.value, password.value)">Submit</a>
+</form>
+
+<div *ngIf="authService.getUser()">
+  <span>Logged in as <b>{{ authService.getUser() }}</b></span>
+  <a href (click)="logout()">Log out</a>
+</div>

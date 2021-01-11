@@ -1,0 +1,15 @@
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" [routerLink]="['/home']">
+    <img src="assets/pear.png" class="application-icon"> {{ title }}
+  </a>
+  <a class="nav-item" [routerLink]="['/about']">About Us</a>
+
+  <form class="form-inline mr-md-n1">
+    <img src="assets/user.png" class="application-icon">
+    <span class="nav-item p-1">{{ currentUser }}</span>
+    <a class="nav-item p-1" [routerLink]="['/login']">Login</a>
+    <a class="nav-item p-1" [routerLink]="['/register']">Register</a>
+  </form>
+</nav>
+
+

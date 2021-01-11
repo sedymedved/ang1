@@ -1,0 +1,30 @@
+GET https://sedymedved.wz.cz/api/list-users.php?err=0
+Accept: application/json
+###
+
+GET https://sedymedved.wz.cz/api/get-user.php?id=21&err=0
+Accept: application/json
+###
+
+POST https://sedymedved.wz.cz/api/create-user.php
+Accept: application/json
+Content-Type: application/x-www-form-urlencoded
+
+username=matousek3&email=matousek3@email.cz&password=matousek3_heslo&preferences={}
+###
+
+POST https://sedymedved.wz.cz/api/get-user.php
+Accept: application/json
+Content-Type: application/x-www-form-urlencoded
+
+id=10
+###
+
+GET https://sedymedved.wz.cz/api/delete-user.php?id=20&err=0
+Accept: application/json
+###
+
+GET https://sedymedved.wz.cz/api/test.php?err=0
+Accept: application/json
+###
+

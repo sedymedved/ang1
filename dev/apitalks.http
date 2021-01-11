@@ -1,0 +1,55 @@
+GET https://api.apitalks.store/czso.cz/obec-a-vojensky-ujezd
+Accept: application/json
+x-api-key: cvrRhgiyHb8P4KkcqWoY3aY5oueG81Ae5Li1xu15
+###
+
+GET https://api.apitalks.store/czso.cz/obyvatele-sidelni-jednotky
+Accept: application/json
+x-api-key: cvrRhgiyHb8P4KkcqWoY3aY5oueG81Ae5Li1xu15
+###
+
+GET https://api.apitalks.store/czso.cz/obyvatele-sidelni-jednotky/759033373
+Accept: application/json
+x-api-key: cvrRhgiyHb8P4KkcqWoY3aY5oueG81Ae5Li1xu15
+###
+
+GET https://api.apitalks.store/czso.cz/mestsky-obvod-mestska-cast?filter={"limit":30,"skip":40}
+Accept: application/json
+x-api-key: cvrRhgiyHb8P4KkcqWoY3aY5oueG81Ae5Li1xu15
+###
+
+GET https://api.apitalks.store/czso.cz/stat
+Accept: application/json
+x-api-key: cvrRhgiyHb8P4KkcqWoY3aY5oueG81Ae5Li1xu15
+###
+
+GET https://api.apitalks.store/czso.cz/kraj
+Accept: application/json
+x-api-key: cvrRhgiyHb8P4KkcqWoY3aY5oueG81Ae5Li1xu15
+###
+
+GET https://api.apitalks.store/czso.cz/okres
+Accept: application/json
+x-api-key: cvrRhgiyHb8P4KkcqWoY3aY5oueG81Ae5Li1xu15
+###
+
+GET https://api.apitalks.store/czso.cz/cizinci-podle-statniho-obcanstvi-veku-a-pohlavi
+Accept: application/json
+x-api-key: cvrRhgiyHb8P4KkcqWoY3aY5oueG81Ae5Li1xu15
+###
+
+GET https://api.apitalks.store/czso.cz/obyvatelstvo-domy
+Accept: application/json
+x-api-key: cvrRhgiyHb8P4KkcqWoY3aY5oueG81Ae5Li1xu15
+###
+
+
+GET https://api.apitalks.store/skoly
+Accept: application/json
+x-api-key: cvrRhgiyHb8P4KkcqWoY3aY5oueG81Ae5Li1xu15
+###
+
+GET https://api.apitalks.store/volna-pracovni-mista
+Accept: application/json
+x-api-key: cvrRhgiyHb8P4KkcqWoY3aY5oueG81Ae5Li1xu15
+###

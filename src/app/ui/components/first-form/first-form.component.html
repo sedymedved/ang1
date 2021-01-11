@@ -1,0 +1,19 @@
+<h3>first-form:</h3>
+<form
+  [formGroup]="myForm"
+  (ngSubmit)="onSubmit(myForm.value)">
+
+  <div>
+    <label for="skuInput" >SKU:</label>
+    <label class="mandatory" title="Mandatory field."> (*) </label>
+    <input type="text"
+      id="skuInput"
+      name="sku"
+      [formControl]="control('sku')"
+      [class.error]="!controlTouchedNotValid('sku')">
+    <span *ngIf="control('sku').hasError('invalidSku')">SKU must begin with 123. </span>
+    <span *ngIf="control('sku').hasError('minlength')">Minimum length is 5. </span>
+  </div>
+
+  <button type="submit" [disabled]="!myForm.valid">Submit</button>
+</form>

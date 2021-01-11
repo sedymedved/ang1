@@ -1,0 +1,30 @@
+Prihlasovaci jmeno: sedymedved.wz.cz
+Email:              sedy.medved@gmail.com
+Domena:             sedymedved.wz.cz
+Adresa:             https://sedymedved.wz.cz/
+Zaplaceno:          2roky od 28.12.2020 za 216Kc bez DPH
+Administrace:       https://www.webzdarma.cz/admin/
+
+FTP:
+Adresa ftp serveru: ftp5.webzdarma.cz
+Uživatelské jméno:  sedymedved.wz.cz
+https://www.webzdarma.cz/podpora/tag/44-ftp/145-jak-nahrat-web-pres-ftp
+
+Domovsky adresar:   /3w/users/s/sedymedved.wz.cz/web/
+                    /3w/users/s/sedymedved.wz.cz/web/api/version.php
+
+Error log:          /3w/users/s/sedymedved.wz.cz/.log/error.log
+
+
+MySQL:
+Server:            sql5.webzdarma.cz:3306
+Název databáze:    sedymedvedwz0031
+Uživatelské jméno: sedymedvedwz0031
+Heslo:             72,&nn0&2oP5,Q4^^71_   puvodni heslo, ted uz ne
+
+encoded=lwUTigE2v8L6HKAu4twRFHj5WAZWrJzgqNdI3W8gGys=
+decoded=72,&nn0&2oP5,Q4^^71_
+
+phpMyAdmin:        https://pma5.webzdarma.cz/db_structure.php?server=2&db=sedymedvedwz0031
+
+

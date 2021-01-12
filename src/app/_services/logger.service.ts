@@ -25,7 +25,12 @@ export class LoggerService {
   }
 
   log(message: any, data?: any): void {
-    console.log(message, data);
+    if (data) {
+      console.log(message, data);
+    } else {
+      console.log(message);
+    }
+
   }
 
 }

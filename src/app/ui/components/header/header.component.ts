@@ -1,5 +1,4 @@
-import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {Component} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 
 @Component({
@@ -7,18 +6,15 @@ import {Title} from '@angular/platform-browser';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
   title: string;
   currentUser: string;
 
-  constructor(private route: ActivatedRoute, private titleService: Title) {
+  constructor(private titleService: Title) {
     this.title = 'Ang1';
     this.titleService.setTitle(this.title);
     this.currentUser = 'Anonymous';
-  }
-
-  ngOnInit(): void {
   }
 
 }

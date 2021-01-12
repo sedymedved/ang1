@@ -10,23 +10,11 @@ import {HomeService} from '../../_services/home.service';
 export class HomeComponent {
 
   message = '';
-  count = 10;
 
   constructor(private route: ActivatedRoute, private logger: LoggerService, private homeService: HomeService) {
-
     route.params.subscribe(params => {
       this.message = params.message;
     });
-
-  }
-
-  increment(): void {
-  }
-
-  decrement(): void {
-  }
-
-  reset(): void {
   }
 
 

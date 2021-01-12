@@ -36,7 +36,3 @@ export class AuthService {
 
 }
 
-export const AUTH_PROVIDERS: Array<any> = [
-  {provide: AuthService, useClass: AuthService}
-];
-

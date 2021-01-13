@@ -15,7 +15,15 @@ NgRx.io
 
 https://www.npmjs.com/package/@ngrx/store
 
-ng add @ngrx/store
+$ npm i @angular/cli@v10-lts --save-dev
+$ npm i @angular/{core,animations,common,compiler,forms,platform-browser,platform-browser-dynamic,router}@v10-lts --save-prod
+
+$ npm i @ngrx/schematics --save-dev --save-exact
+$ npm i @ngrx/store --save-prod  --save-exact
+$ npm i @ngrx/entity --save-prod  --save-exact
+$ npm i @ngrx/effects --save-prod  --save-exact
+
+
 
 
 -------------------------------------------------------------------------------

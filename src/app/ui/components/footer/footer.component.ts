@@ -12,7 +12,7 @@ export class FooterComponent {
 
   constructor() {
     this.developer = 'Sedy Medved';
-    this.year = '2001';
+    this.year = '2021';
   }
 
 }

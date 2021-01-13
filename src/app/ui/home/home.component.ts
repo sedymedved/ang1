@@ -3,6 +3,7 @@ import {ActivatedRoute} from '@angular/router';
 import {LoggerService} from '../../_services/logger.service';
 import {HomeService} from '../../_services/home.service';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html'
@@ -10,6 +11,7 @@ import {HomeService} from '../../_services/home.service';
 export class HomeComponent {
 
   message = '';
+  globalCounter = 0;
 
   constructor(private route: ActivatedRoute, private logger: LoggerService, private homeService: HomeService) {
     route.params.subscribe(params => {
@@ -17,5 +19,12 @@ export class HomeComponent {
     });
   }
 
+  inc(): void {
+    this.globalCounter += 1;
+  }
+
+  reset(): void {
+    this.globalCounter = 0;
+  }
 
 }

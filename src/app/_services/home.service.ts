@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {LoggerService} from './logger.service';
 import {Observable} from 'rxjs';
+import {User} from '../_models/user';
 
 @Injectable({
   providedIn: 'root'
@@ -13,12 +14,13 @@ export class HomeService {
   //
   // deleteUserError$ = new Subject<string>();
 
-  constructor(private http: HttpClient, private logger: LoggerService) {}
+  constructor(private http: HttpClient, private logger: LoggerService) {
+  }
 
   // ------------------------------------------------------------------------
   listUsers(errNo: number): Observable<any> {
     const params = new HttpParams().set('err', String(errNo));
-    const httpOptions = this.buildOptions(params);
+    const httpOptions = {params};
     return this.http.get('https://sedymedved.wz.cz/api/list-users.php', httpOptions);
   }
 
@@ -100,15 +102,15 @@ export class HomeService {
   //       });
   // }
 
-  buildOptions(params: HttpParams): object {
-    const headers = new HttpHeaders();
-    const httpOptions = {
-      headers,
-      params,
-      responseType: 'json' as const,
-      observe: 'response' as const
-    };
-    return httpOptions;
-  }
+  // buildOptions(params: HttpParams): object {
+  //   const headers = new HttpHeaders();
+  //   const httpOptions = {
+  //     headers,
+  //     params,
+  //     responseType: 'json' as const,
+  //     observe: 'body' as const
+  //   };
+  //   return httpOptions;
+  // }
 
 }

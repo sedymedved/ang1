@@ -20,8 +20,7 @@ import {HttpClientModule} from '@angular/common/http';
     AppComponent
   ],
   providers: [
-    LoggedInGuard,
-    AppRoutingModule
+    LoggedInGuard
   ],
   bootstrap: [AppComponent]
 })

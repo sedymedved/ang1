@@ -7,12 +7,17 @@ import {LoggedInGuard} from './_services/logged-in.guard';
 import {FooterComponent} from './ui/components/footer/footer.component';
 import {HeaderComponent} from './ui/components/header/header.component';
 import {HttpClientModule} from '@angular/common/http';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from './reducers';
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StoreModule.forRoot(reducers, {
+      metaReducers
+    })
   ],
   declarations: [
     HeaderComponent,

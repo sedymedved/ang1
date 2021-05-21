@@ -23,8 +23,7 @@ $ npm i @ngrx/store --save-prod  --save-exact
 $ npm i @ngrx/entity --save-prod  --save-exact
 $ npm i @ngrx/effects --save-prod  --save-exact
 
-
-
+$ ng add @ngrx/store@10.1.2 --minimal false
 
 -------------------------------------------------------------------------------
 
